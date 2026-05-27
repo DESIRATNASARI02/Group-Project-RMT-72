@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useGame } from "../context/GameContext";
 import { socket } from "../socket/socket";
 import { startBgMusic, stopBgMusic, resumeCtx } from "../utils/soundManager";
+import logo from "../assets/logo.png";
 
 export default function Lobby() {
   const { state, dispatch } = useGame();
@@ -75,7 +76,7 @@ export default function Lobby() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8 flex flex-col items-center">
           <img
-            src="/logo.png"
+            src={logo}
             alt="Naval Strike Logo"
             className="w-72 md:w-96 drop-shadow-2xl mb-4"
           />
