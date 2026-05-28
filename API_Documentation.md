@@ -9,7 +9,7 @@ http://localhost:3000
 Production URL:
 
 ```txt
-https://your-backend-url.com
+https://group-project-rmt-72.vercel.app
 ```
 
 Default error response:
@@ -341,13 +341,13 @@ Backend:
 Client `.env`
 
 ```env
-VITE_SERVER_URL=http://localhost:3000
+VITE_SERVER_URL=http://localhost:5173
 ```
 
 Production:
 
 ```env
-VITE_SERVER_URL=https://your-backend-url.com
+VITE_SERVER_URL=https://group-project-rmt-72.vercel.app
 ```
 
 ---
