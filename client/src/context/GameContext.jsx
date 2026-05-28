@@ -58,13 +58,13 @@ function gameReducer(state, action) {
         currentTurn: action.payload.currentTurn,
         players: action.payload.players,
       };
-
     case "SHOT_RESULT": {
       const { shooterId, row, col, result, shipName, gameOver, winnerId } = action.payload;
       const isMyShot = shooterId === state.playerId;
+      const COLS = ["A","B","C","D","E","F","G","H","I","J"];
       const logMsg = isMyShot
-        ? `Kamu menembak [${col},${row + 1}] → ${result === "hit" || result === "sunk" ? "HIT!" : "Miss"}`
-        : `Musuh menembak [${col},${row + 1}] → ${result === "hit" || result === "sunk" ? "HIT!" : "Miss"}`;
+        ? `Kamu menembak [${COLS[col]},${row + 1}] → ${result === "hit" || result === "sunk" ? "HIT!" : "Miss"}`
+        : `Musuh menembak [${COLS[col]},${row + 1}] → ${result === "hit" || result === "sunk" ? "HIT!" : "Miss"}`;
 
       if (isMyShot) {
         const newEnemyShots = (state.enemyShots || createEmptyShots()).map((r) => [...r]);

@@ -48,7 +48,7 @@ export default function Battle() {
   const totalEnemyHits = state.enemyShots?.flat()?.filter((s) => s === "hit")?.length ?? 0;
 
   return (
-    <div className="min-h-screen bg-[#0a1628] p-4">
+    <div className="min-h-screen bg-[#0a1628] p-4" style={{ zoom: "150%" }}>
       <div className="flex items-center gap-4 mb-4 flex-wrap">
         <h2 className="text-xl font-bold text-blue-400">⚔️ FleetClash</h2>
         <div className={`px-4 py-1.5 rounded-full text-sm font-medium ${isMyTurn ? "bg-green-900 text-green-400" : "bg-slate-800 text-slate-400"}`}>

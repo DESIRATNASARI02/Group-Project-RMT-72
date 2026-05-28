@@ -48,13 +48,13 @@ export default function PlaceShips() {
   const allPlaced = placedShips.length === SHIPS_CONFIG.length;
 
   return (
-    <div className="min-h-screen bg-[#0a1628] p-6">
-      <div className="mb-5">
+    <div className="min-h-screen bg-[#0a1628] p-6" style={{ zoom: "150%" }}>
+      <div className="mb-5 text-center">
         <h2 className="text-2xl font-bold text-blue-400">⚓ Susun Armada</h2>
         <p className="text-slate-400 text-sm">Tempatkan semua kapalmu sebelum battle dimulai</p>
       </div>
 
-      <div className="flex gap-6 flex-wrap">
+      <div className="flex gap-6 flex-wrap justify-center">
         <div>
           <Grid grid={grid} shots={null} onCellClick={handleCellClick} interactive={!allPlaced} />
         </div>
@@ -97,9 +97,10 @@ export default function PlaceShips() {
           </div>
 
           {currentShip && (
-            <div className="bg-slate-800 rounded-lg p-3 text-sm text-slate-400">
-              Menempatkan: <span className="text-blue-400 font-medium">{currentShip.name}</span> ({currentShip.size} kotak)
-            </div>
+          <div className="bg-slate-800 rounded-lg p-3 text-sm text-slate-400">
+            <p>Menempatkan: <span className="text-blue-400 font-medium">{currentShip.name}</span></p>
+            <p>Jumlah kotak: <span className="text-blue-400 font-medium">{currentShip.size}</span></p>
+          </div>
           )}
 
           {allPlaced && (
